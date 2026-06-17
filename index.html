@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PmjArts &mdash; Premium Portfolio Engineering</title>
+<title>PmjArts &mdash; Coded </> Art!</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -146,20 +146,24 @@ section {
   margin:28px auto 0; 
 }
 
-/* ---- Responsive Fluid Specimen ---- */
+/* ---- Interactive Specimen Modal ---- */
 .specimen-container {
   margin: 50px auto 0;
-  max-width: 640px;
+  max-width: 700px;
   width: 100%;
 }
 .specimen { 
   display:block; 
   width: 100%;
-  height: auto; /* Allow height to adjust proportionally */
+  height: auto;
   filter: drop-shadow(0 30px 60px rgba(15,45,54,0.1)); 
   transition: transform 0.4s ease; 
 }
 .specimen:hover { transform: translateY(-4px); }
+.specimen-svg {
+  width: 100%;
+  height: auto;
+}
 
 .audience{ 
   text-align:center; 
@@ -287,33 +291,21 @@ section {
 .ct:hover { color:var(--teal); }
 .ct svg{ width:20px; height:20px; flex:0 0 20px; color:var(--teal); opacity:0.85; }
 
-/* ---- Robust Responsive Breakdown (Mobile, Tablet, Cross-device) ---- */
-@media (max-width: 960px) {
+/* ---- Responsive Breakdown (Mobile Optimization) ---- */
+@media (max-width: 900px) {
   .nav-links a:not(.nav-btn) { display: none; }
-  .nav-container { padding: 0 24px; }
-  
-  section { padding: 100px 24px 60px; }
-  #hero { padding-top: 130px; }
-  
-  .headline { font-size: 44px; line-height: 1.15; }
-  .sub { font-size: 18px; margin-top: 20px; }
-  
-  .cards, .features, .process, .contact-grid { 
-    grid-template-columns: 1fr; 
-    gap: 24px; 
-  }
-  
+  .headline { font-size: 42px; }
+  .sub { font-size: 18px; }
+  .cards, .features, .process, .contact-grid { grid-template-columns: 1fr; gap: 24px; }
   .card { padding: 32px; }
-  .tier-desc { min-height: auto; margin-bottom: 20px; }
-  
-  .step { padding: 24px 16px; text-align: left; display: flex; flex-direction: column; align-items: flex-start; }
-  .step .n { margin-bottom: 6px; font-size: 26px; }
+  .tier-desc { min-height: auto; }
+  .step { text-align: left; padding: 24px 16px; }
   .step + .step::before {
     left: 0; right: 0; top: -12px; bottom: auto; height: 1px; width: auto;
     background: linear-gradient(to right, var(--line), transparent);
   }
-  
-  .cta { width: 100%; padding: 20px 32px; font-size: 18px; }
+  section { padding: 100px 24px 60px; }
+  #hero { padding-top: 140px; }
 }
 </style>
 </head>
@@ -321,6 +313,7 @@ section {
 
   <div class="bg-mesh"></div>
 
+  <!-- Global Header Navigation -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-brand">PmjArts</a>
@@ -333,51 +326,55 @@ section {
     </div>
   </nav>
 
+  <!-- Hero Platform Overview Section -->
   <section id="hero">
-    <div class="eyebrow"><span></span>Bespoke Engineering For Creatives<span></span></div>
-    <h1 class="headline">A hand-crafted portfolio<br>that wins you the <em>work.</em></h1>
-    <p class="sub">We engineer clean, highly optimized custom digital portfolios. No restrictive drag-and-drop templates, no layout clutter &mdash; code designed entirely to project your authority.</p>
-    
+    <div class="eyebrow"><span></span>Hand-Crafted<span></span></div>
+    <h1 class="headline">A Portfolio<br>that wins you the <em>work.</em></h1>
+    <p class="sub">Clean, highly optimized custom digital portfolios. No restrictive drag-and-drop templates, no layout clutter &mdash; code designed entirely to project your authority.</p>
+     
     <div class="specimen-container">
-      <svg viewBox="0 0 560 330" class="specimen" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stop-color="#EAF1F1"/><stop offset="1" stop-color="#F6F9F9"/>
-          </linearGradient>
-        </defs>
-        <rect x="24" y="20" width="512" height="286" rx="16" fill="#FFFFFF" stroke="#164D5D" stroke-opacity="0.35" stroke-width="1.5"/>
-        <path d="M24 36 a16 16 0 0 1 16 -16 h480 a16 16 0 0 1 16 16 v18 h-512 z" fill="#F4F7F7" stroke="#164D5D" stroke-opacity="0.10" stroke-width="1.5"/>
-        <circle cx="46" cy="37" r="4" fill="#C98A5E"/><circle cx="58" cy="37" r="4" fill="#9FB6BB"/><circle cx="70" cy="37" r="4" fill="#164D5D" opacity="0.3"/>
-        <rect x="160" y="28" width="240" height="16" rx="8" fill="#FFFFFF" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.2"/>
-        <text x="280" y="40" font-family="Manrope" font-size="10" fill="#5C6E72" text-anchor="middle" letter-spacing="0.5">yourname.com</text>
-        <rect x="48" y="74" width="464" height="120" rx="9" fill="url(#sky)" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.5"/>
-        <path d="M48 168 L150 120 L214 150 L300 96 L386 146 L470 110 L512 138 L512 186 a9 9 0 0 1 -9 9 H57 a9 9 0 0 1 -9 -9 Z" fill="#164D5D" opacity="0.08"/>
-        <circle cx="430" cy="104" r="12" fill="#C98A5E" opacity="0.45"/>
-        <rect x="48" y="212" width="130" height="12" rx="6" fill="#0F2D36" opacity="0.75"/>
-        <rect x="48" y="232" width="210" height="6" rx="3" fill="#5C6E72" opacity="0.35"/>
-        <rect x="332" y="210" width="50" height="50" rx="8" fill="#EAF1F1" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.3"/>
-        <rect x="394" y="210" width="50" height="50" rx="8" fill="#EAF1F1" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.3"/>
-        <rect x="456" y="210" width="56" height="50" rx="8" fill="#EAF1F1" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.3"/>
-      </svg>
+      <div class="specimen">
+        <svg viewBox="0 0 560 330" class="specimen-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#EAF1F1"/><stop offset="1" stop-color="#F6F9F9"/>
+            </linearGradient>
+          </defs>
+          <rect x="24" y="20" width="512" height="286" rx="16" fill="#FFFFFF" stroke="#164D5D" stroke-opacity="0.35" stroke-width="1.5"/>
+          <path d="M24 36 a16 16 0 0 1 16 -16 h480 a16 16 0 0 1 16 16 v18 h-512 z" fill="#F4F7F7" stroke="#164D5D" stroke-opacity="0.10" stroke-width="1.5"/>
+          <circle cx="46" cy="37" r="4" fill="#C98A5E"/><circle cx="58" cy="37" r="4" fill="#9FB6BB"/><circle cx="70" cy="37" r="4" fill="#164D5D" opacity="0.3"/>
+          <rect x="160" y="28" width="240" height="16" rx="8" fill="#FFFFFF" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.2"/>
+          <text x="280" y="40" font-family="Manrope" font-size="10" fill="#5C6E72" text-anchor="middle" letter-spacing="0.5">yourname.com</text>
+          <rect x="48" y="74" width="464" height="120" rx="9" fill="url(#sky)" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.5"/>
+          <path d="M48 168 L150 120 L214 150 L300 96 L386 146 L470 110 L512 138 L512 186 a9 9 0 0 1 -9 9 H57 a9 9 0 0 1 -9 -9 Z" fill="#164D5D" opacity="0.08"/>
+          <circle cx="430" cy="104" r="12" fill="#C98A5E" opacity="0.45"/>
+          <rect x="48" y="212" width="130" height="12" rx="6" fill="#0F2D36" opacity="0.75"/>
+          <rect x="48" y="232" width="210" height="6" rx="3" fill="#5C6E72" opacity="0.35"/>
+          <rect x="332" y="210" width="50" height="50" rx="8" fill="#EAF1F1" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.3"/>
+          <rect x="394" y="210" width="50" height="50" rx="8" fill="#EAF1F1" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.3"/>
+          <rect x="456" y="210" width="56" height="50" rx="8" fill="#EAF1F1" stroke="#164D5D" stroke-opacity="0.12" stroke-width="1.3"/>
+        </svg>
+      </div>
     </div>
-    <p class="audience">Engineered For &middot; <b>Photographers</b> &middot; <b>Designers</b> &middot; <b>Architects</b> &middot; <b>Engineers</b></p>
+    <p class="audience">Engineered For &middot; <b>All Professionals</b> &middot; <b>Entrepreneurs</b> &middot; <b>Business Owners</b> &middot; <b>Enterprises</b></p>
   </section>
 
+  <!-- Contract Tiers Section -->
   <section id="pricing">
     <div class="sec-label"><span></span>Transparent, Fixed Pricing<span></span></div>
     <div class="cards">
       <div class="card">
         <div class="tier">Starter Space</div>
         <div class="tier-desc">A single-page architectural portfolio optimized to instantly anchor your online authority.</div>
-        <div class="price"><span class="cur">ZMW</span>6,000</div>
-        <div class="usd">Approx. $225 USD</div>
+        <div class="price"><span class="cur">ZMW</span>1,530</div>
+        <div class="usd">Approx. $85 USD</div>
       </div>
       <div class="card pro">
         <div class="tag">Production Layer</div>
         <div class="tier">Dynamic Full-Scale</div>
         <div class="tier-desc">An expansive, multi-page web app structured with highly responsive content management configurations.</div>
-        <div class="price"><span class="cur">ZMW</span>18,000+</div>
-        <div class="usd">Approx. $675+ USD</div>
+        <div class="price"><span class="cur">ZMW</span>3,600+</div>
+        <div class="usd">Approx. $200+ USD</div>
       </div>
     </div>
     <p class="note">All dynamic initial site contract values are pinned securely to standard corporate ZMW parameters.</p>
@@ -390,19 +387,11 @@ section {
     </div>
   </section>
 
-  <section id="process">
-    <div class="sec-label"><span></span>System Pipeline<span></span></div>
-    <div class="process">
-      <div class="step"><span class="n">01</span><div class="l">Discovery Architecture</div><div class="d">Aligning structural needs, asset tracking, and goals.</div></div>
-      <div class="step"><span class="n">02</span><div class="l">Codebase Integration</div><div class="d">Translating system designs into high-performance web solutions.</div></div>
-      <div class="step"><span class="n">03</span><div class="l">Production Deployment</div><div class="d">Configuring domain registers, cloud hosting pipelines, and launch.</div></div>
-    </div>
-  </section>
-
+  <!-- Action Trigger & Footer Area -->
   <section id="contact">
     <div class="cta-container">
       <a class="cta" href="mailto:tembopatson5@gmail.com">
-        <span>Initiate System Consultation</span>
+        <span>Email Consultation</span>
         <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
